@@ -1,26 +1,27 @@
-import React, { useState } from 'react';
-import './SearchBar.css';
+import React, { useState } from "react";
+import "./SearchBar.css";
 
-const Search_API = 'https://api.themoviedb.org/3/search/movie?api_key=2ee646676cba6f73b8e3140497d84ac2&query=';
+const Search_API =
+  "https://api.themoviedb.org/3/search/movie?api_key=2ee646676cba6f73b8e3140497d84ac2&query=";
 
 function SearchBar({ setMovies }) {
-  const [searchValue, setSearchValue] = useState('');
+  const [searchValue, setSearchValue] = useState("");
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
     if (searchValue.trim()) {
       fetch(Search_API + searchValue)
-        .then(response => {
+        .then((response) => {
           if (!response.ok) {
-            throw new Error('Network response was not ok');
+            throw new Error("Network response was not ok");
           }
           return response.json();
         })
-        .then(data => {
+        .then((data) => {
           setMovies(data.results);
         })
-        .catch(error => {
-          console.error('Error fetching search results:', error);
+        .catch((error) => {
+          console.error("Error fetching search results:", error);
         });
     }
   };
@@ -31,15 +32,12 @@ function SearchBar({ setMovies }) {
 
   return (
     <form onSubmit={handleOnSubmit}>
-     
       <input
         type="search"
-        placeholder="Search for movies..."
         className="search"
         value={searchValue}
         onChange={handleOnChange}
       />
-     
     </form>
   );
 }

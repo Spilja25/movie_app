@@ -9,7 +9,7 @@
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
-  height:500px;
+  height: 600px;
 }
 
 .movie-list {
@@ -33,7 +33,7 @@
   margin-top: -0.3rem;
 }
 .movie-info h2 {
-font-weight: 800;
+  font-weight: 800;
 }
 
 .movie-card h2 {
@@ -66,7 +66,6 @@ font-weight: 800;
   margin: 0;
   border-radius: 8px; /* Ensure border radius matches .movie-card */
 }
-
 
 .movie-overview h3 {
   font-size: 1.8rem;

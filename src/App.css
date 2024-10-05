@@ -120,12 +120,15 @@ nav h1 {
   .movie-section h2 {
     font-size: 2rem;
   }
+  .movie-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
-    align-items: flex-start;
+    gap: 0.8rem;
   }
 
   .buttons {
@@ -145,7 +148,7 @@ nav h1 {
 
 @media (max-width: 480px) {
   nav {
-    padding: 0.5rem 1rem;
+    padding: 1.5rem 1rem;
   }
 
   nav h1 {
@@ -166,5 +169,14 @@ nav h1 {
   .movie-wrapper,
   .movie-section > div {
     padding: 1rem;
+  }
+  .movie-list {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .search {
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+    padding-bottom: 0rem;
   }
 }
