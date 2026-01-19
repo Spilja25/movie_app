@@ -1,4 +1,2 @@
-.movie-info{
-    position: absolute;
-    background-color: aliceblue;
-}
+/* Movie component specific styles */
+/* Main styles are in MovieList.css */
